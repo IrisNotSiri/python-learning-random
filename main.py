@@ -1,3 +1,4 @@
+
 fibo=[0,1]
 n=0
 fibolist=[]
@@ -32,3 +33,12 @@ print(stack)
 # removing element from left
 stack.popleft() 
 print(stack)
+
+
+dnsVpnDict = {'port563': ["lanawarenodevpn.completelymanaged.com","563"],
+                        'port443': ["lanawarenodevpn.completelymanaged.com","443"],
+                        'port80': ["lanawarenodevpn.completelymanaged.com","80"]}
+
+for key in dnsVpnDict:
+  print (dnsVpnDict[key]) 
+
