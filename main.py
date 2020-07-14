@@ -71,3 +71,5 @@ if type(y) == list:
 comment = None
 noneValue = {"2qw":"wer1","wef":comment}
 print (noneValue)
+
+del y[1]
