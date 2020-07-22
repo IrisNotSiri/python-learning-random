@@ -9,3 +9,5 @@ with open('stdout.txt', 'r') as stdout:
     elif splitedLine[1] == "Done":
       percentage = "100%"
     print (percentage)
+
+print ("Job Finished")
