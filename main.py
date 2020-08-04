@@ -1,14 +1,15 @@
-with open('stdout.txt', 'r') as stdout:
-  for line in stdout:
-    splitedLine = line.split()
-    #print (line)
-    if splitedLine[1] == "Running":
-      percentage = line.split()[2]
-    elif splitedLine[1] == "Requested":
-      percentage = "0%"
-    elif splitedLine[1] == "Done":
-      percentage = "100%"
-    print (percentage)
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.retry import Retry
 
-print ("Job Finished")
+retry_strategy = Retry(
+    total=3,
+    status_forcelist=[429, 500, 502, 503, 504],
+    method_whitelist=["HEAD", "GET", "OPTIONS"]
+)
+adapter = HTTPAdapter(max_retries=retry_strategy)
+http = requests.Session()
+http.mount("https://", adapter)
+http.mount("http://", adapter)
+
+response = http.get("https://en.wikipedia.org/w/api.php")
 
