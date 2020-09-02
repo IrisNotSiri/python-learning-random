@@ -13,19 +13,31 @@ http.mount("http://", adapter)
 
 response = http.get("https://en.wikipedia.org/w/api.php")
 
-#try if key is in dictionary
-job_request = {'lanawareId': 5, 'action': 'updateAssignment', 'partnerId': 2, 'partnerName': 'WHY', 'customerId': 2, 'customerName': 'Iris Working Lab', 'siteName': 'Fancy site'}
-if 'timeZone' in job_request:
-  print (1)
-else:
-  print(2)
+#dictionary
+ip = 12
+host = {ip: 12}
+result = {}
+result[ip] = {ip: host} 
+print (result)
+#iterate using range
+for i in range(5):
+  print (i)
 
-#remove space between strings
-hostname = ""
-hostid = 2
-name = "Siri Working Lab"
-print (name.split())
-for i in name.split():
-  hostname = hostname+i
-hostname += str(hostid)
-print (hostname)
+#default argument in function
+def orange(tree, static = False):
+  if static:
+    result = tree * 12
+
+  return result
+
+print (orange(12, True))
+
+#numpy and hsv to rgb color
+import colorsys
+import numpy
+for i in numpy.arange(0.0,1.0, 0.1):
+  #print("+++"+str(i))
+  r, g, b = colorsys.hsv_to_rgb(0.1, 1.0, 1.0)
+  R, G, B = str(255 * r), str(255 * g), str(255 * b)
+  RAINBOW_RGB = "^"+R+"*"+G+"*"+B+"*"  
+  print(RAINBOW_RGB)
