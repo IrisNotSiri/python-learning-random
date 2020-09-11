@@ -42,3 +42,15 @@ for i in numpy.arange(0.0,1.0, 0.1):
   RAINBOW_RGB = "^"+R+"*"+G+"*"+B+"*"  
   print(RAINBOW_RGB)
 
+from time import sleep
+from random import uniform
+scanningNum = 5
+deviceNum = 100
+increase = 0
+while True:
+  increase += uniform(0,0.1)
+  progress = round((scanningNum-1)+increase/deviceNum*100,1)
+  if increase > 1:
+      progress = round(scanningNum/deviceNum*100,1)
+  print (progress)
+  sleep (1)
