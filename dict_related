@@ -1,0 +1,28 @@
+job_request = {'lanawareId': 5, 'action': 'updateAssignment', 'partnerId': 2, 'customerName': 'Iris Working Lab', 'siteName': 'Fancy site', 'sitesite':None}
+if 'timeZone' in job_request:
+  print (1)
+else:
+  print(2)
+hostname = ""
+hostid = 2
+name = "Iris Working Lab"
+print (name.split())
+for i in name.split():
+  hostname = hostname+i
+hostname += str(hostid)
+print (hostname)
+print(job_request['sitesite'])
+
+
+report = {'host':{}}
+if not report['host']:
+  print (1)
+else:
+  print (2)
+host = None
+if host:
+  print ('yes')
+else:
+  print ('no')
+if host is None:
+  print ('none')
