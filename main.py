@@ -42,3 +42,32 @@ for i in numpy.arange(0.0,1.0, 0.1):
   RAINBOW_RGB = "^"+R+"*"+G+"*"+B+"*"  
   print(RAINBOW_RGB)
 
+
+import time
+def sendProgress():
+  global perProgress
+  perProgress = True
+  while True:
+    print(1)
+    if perProgress:
+      print(perProgress)
+      print("step 1")
+      time.sleep(5)
+      print ("goes into True")
+      y = changePerProgress()
+    else:
+      print(perProgress)
+      print("goes into false")
+      perProgress = True
+
+def changePerProgress():
+  print("put in True or False")
+  global perProgress
+  inPut = input()
+  print (type(inPut)) 
+  if inPut == "True":
+    perProgress = True
+  else:  
+    perProgress = False  
+
+sendProgress()
